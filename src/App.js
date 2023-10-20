@@ -20,6 +20,7 @@ function App() {
     };
   }
   console.log(data)
+  console.log(data[0].cedula)
   return (
     <div className="App">
 
@@ -49,11 +50,12 @@ function App() {
           </tbody>
         </table>
       )}
-      {data && (
-       data.map((item, index) =>(
-        <input placeholder="Hello" value={item[index].papa}/>
-       ))
-      )}
+        <select>
+          <option>...</option>
+      {data.map((item) =>(
+          <option value={item.cedula}>{item.cedula}</option>
+          ))}
+          </select>
 
       <br /><br />
       ... webstylepress ...
